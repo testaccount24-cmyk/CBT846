@@ -1,0 +1,8 @@
+My //STEPLIB was changed from SYS1.W$$.LINKLIB to SYS1.CBT.LINKLIB.
+
+Please put these program load modules in your own APF-authorized
+library.  You need APF-authorization to write data to Track 0 of
+a disk pack.  This is because normal allocation will not work there,
+and you have to change the DEB to point to Track 0, which requires
+APF-authorization.  (See the code inside the programs.)
+

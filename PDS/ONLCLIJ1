@@ -1,0 +1,13 @@
+//SBGOLOBS JOB ,'SAM GOLOB',CLASS=B,
+//    MSGCLASS=X,NOTIFY=&SYSUID
+//*
+//* Purpose of this program is to change the VOLSER of a volume,
+//*  while it is online.  The PARM field contains the new volume id.
+//*
+//TRK0SAV1 EXEC PGM=ONLCLIP,PARM='DATA03'
+//STEPLIB  DD  DISP=SHR,DSN=SYS1.CBT.LINKLIB
+//SYSPRINT DD  SYSOUT=*
+//SYSUDUMP DD  SYSOUT=*
+//DISKUPD  DD  UNIT=A95,SPACE=(TRK,0),VOL=SER=DATA03,
+//             STORCLAS=SCNOSMS
+//*
